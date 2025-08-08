@@ -1,0 +1,32 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 6%;
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-[hsl(var(--background))]
+           text-[hsl(var(--foreground))];
+  }
+
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+/* ---------- extra 3-D helpers ---------- */
+@layer utilities {
+  .perspective-1000   { perspective: 1000px; }
+  .transform-style-3d { transform-style: preserve-3d; }
+  .backface-hidden    { backface-visibility: hidden; }
+
+  /* Tailwind has rotate-*- utilities, but not on X/Y axes: */
+  .rotate-y-180 { transform: rotateY(180deg); }
+  .rotate-x-180 { transform: rotateX(-180deg); }
+}

@@ -1,0 +1,26 @@
+#runtime & builds
+/node_modules
+/.next
+/out
+/build
+
+#local env / credentials
+.env*
+
+#tooling artefacts
+*.tsbuildinfo
+next-env.d.ts
+.pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#editors & OS clutter
+.DS_Store
+.vscode/
+.idea/
+
+#misc caches
+.vercel
+.turbo/
+coverage/
